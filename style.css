@@ -13,7 +13,7 @@ body {
 
 }
 
-#select {
+#sex {
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -21,7 +21,15 @@ body {
     grid-row-end: 2;
 }
 
-#firstname {
+#civility {
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#first_name {
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -29,7 +37,7 @@ body {
     grid-row-end: 3;
 }
 
-#name {
+#Last_name {
     width: 100%;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -37,7 +45,7 @@ body {
     grid-row-end: 3;
 }
 
-#bday {
+#birthdate {
     width: 100%;
     grid-column-start: 3;
     grid-column-end: 4;
@@ -53,7 +61,7 @@ body {
     grid-row-end: 4;
 }
 
-#tel {
+#phone {
     width: 100%;
     grid-column-start: 2;
     grid-column-end: 3;
