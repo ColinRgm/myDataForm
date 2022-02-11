@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <title>Ma base de données SQL</title>
+</head>
+<body>
+    <header>
+        <h1>Formulaire</h1>
+            <form action="test.php" method="POST">
+                <div class="grid-container">
+                        <select name="select" id="select" aria-label="">
+                            <option value="monsieur">Monsieur</option>
+                            <option value="madame">Madame</option>
+                        </select>
+
+                        <label for="name"></label>
+                        <input type="text" id="firstname" name="firstname" aria-label="" placeholder="Prénom">
+
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Nom">
+
+                        <label for="bday"></label>
+                        <input type="date" id="bday" name="bday">
+
+                        <label for="name"></label>
+                        <input type="email" id="email" name="email" aria-label="" placeholder="E-Mail">
+
+                        <label for="tel"></label>
+                        <input type="tel" id="tel" name="tel" aria-label="" placeholder="N° tél">
+
+                        <label for="name"></label>
+                        <input type="text" id="adress" name="adress" placeholder="Rue" aria-label="">
+
+                        <label for="name"></label>
+                        <input type="text" id="num" name="num" placeholder="N°" aria-label="">
+
+                        <label for="name"></label>
+                        <input type="text" id="npa" name="npa" placeholder="Code postal" aria-label="">
+
+                        <label for="name"></label>
+                        <input type="text" id="city" name="city" placeholder="Ville" aria-label="">
+
+                        <input id="button" name="submit" type="submit" value="Envoyer"/>
+                </div>
+            </form>
+    </header>
+    <footer>
+
+    </footer>
+</body>
+</html>
