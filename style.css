@@ -101,6 +101,14 @@ body {
     grid-row-end: 6;
 }
 
+#country {
+    width: 100%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
 #button {
     width: 100%;
     grid-column-start: 3;
