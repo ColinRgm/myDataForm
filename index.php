@@ -8,34 +8,34 @@ if (isset($_POST['submit'])) {
 
 
 
-    /* -- Country ----------------------------------------------------------------------------- */
-    $country = $_POST['country'];
+/* -- Country ------------------------------------------------------------------------------------------------------- */
+        $country = $_POST['country'];
 
-    $stmt_countryIfExistOrNot = $pdo->prepare(
-            'SELECT * FROM Countries WHERE country_name = :countryName'
-    );
+        $stmt_countryIfExistOrNot = $pdo->prepare(
+                'SELECT * FROM Countries WHERE country_name = :countryName'
+        );
 
-    $stmt_countryIfExistOrNot->execute([
-            'countryName' => $country
-    ]);
-
-    $existantCountry = $stmt_countryIfExistOrNot->fetchAll();
-
-    if ($existantCountry) {
-        $id_country = $existantCountry[0]['id_country'];
-    } else {
-        $stmt_country = $pdo->prepare(
-            'INSERT INTO Countries (country_name)
-                VALUE(:country_name)');
-        $stmt_country->execute([
-            'country_name' => $country
+        $stmt_countryIfExistOrNot->execute([
+                'countryName' => $country
         ]);
-        $id_country = $pdo->lastInsertId();
-    }
+
+        $existantCountry = $stmt_countryIfExistOrNot->fetchAll();
+
+        if ($existantCountry) {
+            $id_country = $existantCountry[0]['id_country'];
+        } else {
+            $stmt_country = $pdo->prepare(
+                'INSERT INTO Countries (country_name)
+                    VALUE(:country_name)');
+            $stmt_country->execute([
+                'country_name' => $country
+            ]);
+            $id_country = $pdo->lastInsertId();
+        }
 
 
 
-        /* -- Adresses ------------------------------------------------------------------------ */
+/* -- Adresses ------------------------------------------------------------------------------------------------------ */
         $stmt_adress = $pdo->prepare(
                 'INSERT INTO Adresses (street, postal_code, city, Countries_id_country)
                 VALUES (:street, :postal_code, :city, :Countries_id_country)');
@@ -45,11 +45,11 @@ if (isset($_POST['submit'])) {
                 'city' => $_POST['city'],
                 'Countries_id_country' => $id_country,
         ]);
-        $id_country = $pdo->lastInsertId();
+        $id_address = $pdo->lastInsertId();
 
 
 
-        /* -- Utilisateurs -------------------------------------------------------------------- */
+/* -- Utilisateurs -------------------------------------------------------------------------------------------------- */
         $stmt = $pdo->prepare(
                 'INSERT INTO Users (first_name, Last_name, birthdate, email, phone, civility, sex)
                 VALUES(:first_name, :Last_name, :birthdate, :email, :phone, :civility, :sex)'
@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
 
 
 
-        /* -- Adresses d'utilisateur ---------------------------------------------------------- */
+/* -- Adresses d'utilisateur ---------------------------------------------------------------------------------------- */
         $stmtAdressHasUsers = $pdo->prepare(
                 'INSERT INTO Adresses_has_Users (Adresses_id_adress, Users_id_user)
                 VALUES (:Adresses_id_adress, :Users_id_user)'
@@ -78,10 +78,13 @@ if (isset($_POST['submit'])) {
                 'Users_id_user' => $id_user,
                 'Adresses_id_adress' => $id_address
         ]);
-    }
+        }
 
 ?>
 
+
+
+<!-- Formulaire ------------------------------------------------------------------------------------------------------->
 <h1>Formulaire</h1>
 <form action="index.php" method="POST">
     <div class="grid-container">
