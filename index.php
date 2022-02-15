@@ -89,44 +89,33 @@ if (isset($_POST['submit'])) {
         <form action="index.php" method="POST">
             <div class="grid-container">
 
-                <label for="sex"></label>
-                <select name="sex" id="sex">
+                <select name="sex" id="sex" aria-label="">
                     <option value="0">Monsieur</option>
                     <option value="1">Madame</option>
                 </select>
 
-                <label for="civility"></label>
-                <select name="civility" id="civility">
+                <select name="civility" id="civility" aria-label="">
                     <option value="0">Célibataire</option>
                     <option value="1">Marié</option>
                     <option value="2">Divorcé</option>
                 </select>
 
-                <label for="first_name"></label>
                 <input type="text" id="first_name" name="first_name" aria-label="" placeholder="Prénom">
 
-                <label for="Last_name"></label>
-                <input type="text" id="Last_name" name="Last_name" placeholder="Nom">
+                <input type="text" id="Last_name" name="Last_name" aria-label="" placeholder="Nom">
 
-                <label for="birthdate"></label>
-                <input type="date" id="birthdate" name="birthdate">
+                <input type="date" id="birthdate" name="birthdate" aria-label="">
 
-                <label for="email"></label>
                 <input type="email" id="email" name="email" aria-label="" placeholder="E-Mail">
 
-                <label for="phone"></label>
                 <input type="tel" id="phone" name="phone" aria-label="" placeholder="N° tél">
 
-                <label for="adress"></label>
                 <input type="text" id="adress" name="adress" placeholder="Rue et N°" aria-label="">
 
-                <label for="npa"></label>
                 <input type="text" id="npa" name="npa" placeholder="Code postal" aria-label="">
 
-                <label for="city"></label>
                 <input type="text" id="city" name="city" placeholder="Ville" aria-label="">
 
-                <label for="country"></label>
                 <input type="text" id="country" name="country" placeholder="Pays" aria-label="">
 
                 <input id="button" name="submit" type="submit" value="Envoyer"/>
