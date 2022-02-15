@@ -85,50 +85,55 @@ if (isset($_POST['submit'])) {
 
 
 <!-- Formulaire ------------------------------------------------------------------------------------------------------->
-<h1>Formulaire</h1>
-<form action="index.php" method="POST">
-    <div class="grid-container">
+        <h1>Données personnelles</h1>
+        <form action="index.php" method="POST">
+            <div class="grid-container">
 
-        <label for="sex"></label>
-        <select name="sex" id="sex">
-            <option value="0">Monsieur</option>
-            <option value="1">Madame</option>
-        </select>
+                <label for="sex"></label>
+                <select name="sex" id="sex">
+                    <option value="0">Monsieur</option>
+                    <option value="1">Madame</option>
+                </select>
 
-        <label for="civility"></label>
-        <select name="civility" id="civility">
-            <option value="0">Célibataire</option>
-            <option value="1">Marié</option>
-            <option value="2">Divorcé</option>
-        </select>
+                <label for="civility"></label>
+                <select name="civility" id="civility">
+                    <option value="0">Célibataire</option>
+                    <option value="1">Marié</option>
+                    <option value="2">Divorcé</option>
+                </select>
 
-        <label for="first_name"></label>
-        <input type="text" id="first_name" name="first_name" aria-label="" placeholder="Prénom">
+                <label for="first_name"></label>
+                <input type="text" id="first_name" name="first_name" aria-label="" placeholder="Prénom">
 
-        <label for="Last_name"></label>
-        <input type="text" id="Last_name" name="Last_name" placeholder="Nom">
+                <label for="Last_name"></label>
+                <input type="text" id="Last_name" name="Last_name" placeholder="Nom">
 
-        <label for="birthdate"></label>
-        <input type="date" id="birthdate" name="birthdate">
+                <label for="birthdate"></label>
+                <input type="date" id="birthdate" name="birthdate">
 
-        <label for="email"></label>
-        <input type="email" id="email" name="email" aria-label="" placeholder="E-Mail">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" aria-label="" placeholder="E-Mail">
 
-        <label for="phone"></label>
-        <input type="tel" id="phone" name="phone" aria-label="" placeholder="N° tél">
+                <label for="phone"></label>
+                <input type="tel" id="phone" name="phone" aria-label="" placeholder="N° tél">
 
-        <label for="adress"></label>
-        <input type="text" id="adress" name="adress" placeholder="Rue et N°" aria-label="">
+                <label for="adress"></label>
+                <input type="text" id="adress" name="adress" placeholder="Rue et N°" aria-label="">
 
-        <label for="npa"></label>
-        <input type="text" id="npa" name="npa" placeholder="Code postal" aria-label="">
+                <label for="npa"></label>
+                <input type="text" id="npa" name="npa" placeholder="Code postal" aria-label="">
 
-        <label for="city"></label>
-        <input type="text" id="city" name="city" placeholder="Ville" aria-label="">
+                <label for="city"></label>
+                <input type="text" id="city" name="city" placeholder="Ville" aria-label="">
 
-        <label for="country"></label>
-        <input type="text" id="country" name="country" placeholder="Pays" aria-label="">
+                <label for="country"></label>
+                <input type="text" id="country" name="country" placeholder="Pays" aria-label="">
 
-        <input id="button" name="submit" type="submit" value="Envoyer"/>
-    </div>
-</form>
+                <input id="button" name="submit" type="submit" value="Envoyer"/>
+            </div>
+        </form>
+        <div id="goto">
+            <p><a href="users-list.php">Go to users >></a></p>
+
+            <p><a href="events.php">Go to events >></a></p>
+        </div>

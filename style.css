@@ -2,6 +2,8 @@ body {
     text-align: center;
 }
 
+
+/* -- Grid Container ------------------------------------------------------------------------------------------------ */
 .grid-container {
     margin: 2% 15% 0 15%;
     width: 60%;
@@ -115,4 +117,55 @@ body {
     grid-column-end: 5;
     grid-row-start: 6;
     grid-row-end: 7;
+}
+
+#goto {
+    padding-top: 100px;
+}
+
+/* -- Grid Container 2 ---------------------------------------------------------------------------------------------- */
+.grid-container-2 {
+    margin: 2% 15% 0 15%;
+    width: 60%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 40% 20% 20%;
+    gap: 15px;
+}
+
+#name_event {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#start {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#end {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#submit {
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }

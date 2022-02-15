@@ -15,16 +15,16 @@ require_once 'DB_connection.php';?>
         $stmtUserAndAdress -> execute();
         $user = $stmtUserAndAdress ->fetchAll();
 
-
         foreach ($user as $row){
-            echo "{$row['first_name']} - {$row['last_name']} - {$row['street']} - {$row['postal_code']} - {$row['city']} - {$row['country_name']} - {$row['birthdate']} - {$row['email']} - {$row['phone']} - {$row['sex']} - {$row['civility']}<br> ";
+            echo "{$row['first_name']} - {$row['Last_name']} - {$row['street']} - {$row['postal_code']} - {$row['city']} - {$row['country_name']} - {$row['birthdate']} - {$row['email']} - {$row['phone']} - {$row['sex']} - {$row['civility']}<br> ";
         }
-
 ?>
 
-<div>
-    <p><a href="index.php"><< Go back to sign in</a></p>
-</div>
-<div>
-    <p><a href="events.php">Go to events >></a></p>
-</div>
+
+<!-- Boutons ---------------------------------------------------------------------------------------------------------->
+        <div>
+            <p><a href="index.php"><< Go back to sign in</a></p>
+        </div>
+        <div>
+            <p><a href="events.php">Go to events >></a></p>
+        </div>
