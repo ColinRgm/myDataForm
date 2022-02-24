@@ -38,7 +38,7 @@ if (isset($_POST['submit'])){
             </div>
         </form>
         <div id="goto">
-            <p><a href="index.php"><< Go back to users</a></p>
+            <p><a href="index.php"><< Go back to Sign In</a></p>
 
             <p><a href="users-list.php">Go to users >></a></p>
         </div>

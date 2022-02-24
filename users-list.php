@@ -23,7 +23,7 @@ require_once 'DB_connection.php';?>
 
 <!-- Boutons ---------------------------------------------------------------------------------------------------------->
         <div>
-            <p><a href="index.php"><< Go back to sign in</a></p>
+            <p><a href="index.php"><< Go back to Sign In</a></p>
         </div>
         <div>
             <p><a href="events.php">Go to events >></a></p>
