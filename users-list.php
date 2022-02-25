@@ -32,7 +32,7 @@ require_once 'DB_connection.php';?>
 
 <?php while ($row = $stmtUserAndAdress->fetch()) { ?>
 
-    <div class="container">
+    <div class="container is-6">
         <div class="card">
             <div class="card-content">
                 <div class="media">
