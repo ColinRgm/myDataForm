@@ -17,7 +17,7 @@
 
     $stmtUsers = $pdo->prepare(
         'SELECT * FROM Users
-                    
+                
                    JOIN Adresses_has_Users AhU on Users.id_user = AhU.Users_id_user
                    JOIN Adresses A on A.id_adress = AhU.Adresses_id_adress
                    JOIN Countries C on C.id_country = A.Countries_id_country
@@ -27,6 +27,31 @@
     $stmtUsers -> execute(['id_user' => $_GET['id']]);
 
     $stmtData = $stmtUsers->fetch();
+
+
+
+/* -- TRY ------------------------------------------------------------------------------------------------------------*/
+    $stmtUpdate = $pdo->prepare(
+        'UPDATE Users SET first_name=:first_name, Last_name=:Last_name, birthdate=:birthdate, email=:email, phone=:phone, civility=:civility, sex=:sex WHERE id_user=:id_user'
+    );
+
+    $stmtUpdate->execute([
+            'first_name' => $_POST['first_name'],
+            'Last_name' => $_POST['Last_name'],
+            'birthdate' => $_POST['birthdate'],
+            'email' => $_POST['email'],
+            'phone' => $_POST['phone'],
+            'civility' => $_POST['civility'],
+            'sex' => $_POST['sex'],
+            'id_user' => $_POST['id_user']
+        ]
+    );
+
+    $stmtTry = $stmtUpdate ->fetch();
+
+
+
+/* -- TRY ------------------------------------------------------------------------------------------------------------*/
 ?>
 
 <style> <?php include 'style.css';?> </style>
