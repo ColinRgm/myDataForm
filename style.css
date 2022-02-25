@@ -121,6 +121,10 @@ body {
 }
 
 #goto {
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
     padding-top: 100px;
 }
 
@@ -171,4 +175,14 @@ body {
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
+}
+
+/* -- Edit Users -----------------------------------------------------------------------------------------------------*/
+
+.title:first-child {
+
+}
+
+.title:last-child {
+
 }
