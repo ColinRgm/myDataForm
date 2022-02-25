@@ -26,20 +26,19 @@ require_once 'DB_connection.php';?>
         ?>
 
 
-
+<p class="title">Utilisateurs</p>
 <!-- Card utilisateur ------------------------------------------------------------------------------------------------->
 <body>
 
 <?php while ($row = $stmtUserAndAdress->fetch()) { ?>
 
-    <div class="container is-6">
+    <div class="container is-2">
         <div class="card">
             <div class="card-content">
                 <div class="media">
                     <div class="media-content">
 
-                        <p class="title is-4">Prénom et Nom</p>
-                        <p class="subtitle"><?php echo"{$row['first_name']} {$row['Last_name']}"?></p>
+                        <p class="title is-3"><?php echo"{$row['first_name']} {$row['Last_name']}"?></p>
                         <p class="title is-4">Adresse</p>
                         <p class="subtitle"><?php echo "{$row['street']}"?>, <?php echo"{$row['postal_code']} {$row['city']}"?> </p>
 

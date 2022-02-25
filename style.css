@@ -1,5 +1,10 @@
 body {
     text-align: center;
+    font-family: "Roboto Light", sans-serif;
+}
+
+.title {
+    margin: 30px 0 50px 0;
 }
 
 
@@ -22,6 +27,7 @@ body {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+    font-size: 17px;
 }
 
 #civility {
@@ -30,6 +36,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    font-size: 17px;
 }
 
 #first_name {
@@ -38,6 +45,7 @@ body {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+    font-size: 17px;
 }
 
 #Last_name {
@@ -46,6 +54,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    font-size: 17px;
 }
 
 #birthdate {
@@ -54,6 +63,7 @@ body {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+    font-size: 17px;
 }
 
 #email {
@@ -62,6 +72,7 @@ body {
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
+    font-size: 17px;
 }
 
 #phone {
@@ -70,6 +81,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+    font-size: 17px;
 }
 
 #adress {
@@ -78,6 +90,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
+    font-size: 17px;
 }
 
 #num {
@@ -86,6 +99,7 @@ body {
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 5;
+    font-size: 17px;
 }
 
 #npa {
@@ -94,6 +108,7 @@ body {
     grid-column-end: 2;
     grid-row-start: 5;
     grid-row-end: 6;
+    font-size: 17px;
 }
 
 #city {
@@ -102,6 +117,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 6;
+    font-size: 17px;
 }
 
 #country {
@@ -110,6 +126,7 @@ body {
     grid-column-end: 4;
     grid-row-start: 5;
     grid-row-end: 6;
+    font-size: 17px;
 }
 
 #button {
@@ -118,14 +135,14 @@ body {
     grid-column-end: 5;
     grid-row-start: 6;
     grid-row-end: 7;
+    font-size: 17px;
 }
 
 #goto {
     font-style: normal;
     font-size: 20px;
     text-decoration: none;
-    color: black;
-    padding-top: 100px;
+    margin: 100px 0 100px 0;
 }
 
 
@@ -141,11 +158,12 @@ body {
     gap: 15px;
 }
 
-#name_event {
+#name {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+    font-size: 17px;
 }
 
 #description {
@@ -153,6 +171,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    font-size: 17px;
 }
 
 #start_time {
@@ -160,6 +179,7 @@ body {
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
+    font-size: 17px;
 }
 
 #end_time {
@@ -167,6 +187,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+    font-size: 17px;
 }
 
 #submit {
@@ -175,6 +196,7 @@ body {
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
+    font-size: 17px;
 }
 
 /* -- Edit Users -----------------------------------------------------------------------------------------------------*/
@@ -191,4 +213,8 @@ body {
     padding: 0 0 25px 0;
 }
 
-/* -- Edit Users -----------------------------------------------------------------------------------------------------*/
+/* -- Card -----------------------------------------------------------------------------------------------------*/
+
+.card {
+    margin-bottom: 25px;
+}

@@ -17,8 +17,8 @@
 
 <style> <?php include 'style.css';?> </style>
 
-
-<h1>Modifier données personnelles</h1>
+<!-- Formulaire Edit -------------------------------------------------------------------------------------------------->
+<h1 class="title">Modifier données personnelles</h1>
 <form action="edit.php" method="POST">
     <div class="grid-container">
 

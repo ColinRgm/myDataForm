@@ -2,13 +2,23 @@
 require_once 'DB_connection.php'; ?>
 
 <style> <?php include 'style.css'; ?> </style>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyData_Form</title>
+</head>
+<body>
+
+
 
 <?php
 if (isset($_POST['submit'])) {
 
 
 
-    /* -- Country ------------------------------------------------------------------------------------------------------- */
+    /* -- Country --------------------------------------------------------------------------------------------------- */
     $country = $_POST['country'];
 
     $stmt_countryIfExistOrNot = $pdo->prepare(
@@ -35,7 +45,7 @@ if (isset($_POST['submit'])) {
 
 
 
-    /* -- Adresses ------------------------------------------------------------------------------------------------------ */
+    /* -- Adresses -------------------------------------------------------------------------------------------------- */
     $stmt_adress = $pdo->prepare(
         'INSERT INTO Adresses (street, postal_code, city, Countries_id_country)
                 VALUES (:street, :postal_code, :city, :Countries_id_country)');
@@ -49,7 +59,7 @@ if (isset($_POST['submit'])) {
 
 
 
-    /* -- Utilisateurs -------------------------------------------------------------------------------------------------- */
+    /* -- Utilisateurs ---------------------------------------------------------------------------------------------- */
     $stmt = $pdo->prepare(
         'INSERT INTO Users (first_name, Last_name, birthdate, email, phone, civility, sex)
                 VALUES(:first_name, :Last_name, :birthdate, :email, :phone, :civility, :sex)'
@@ -69,7 +79,7 @@ if (isset($_POST['submit'])) {
 
 
 
-    /* -- Adresses d'utilisateur ---------------------------------------------------------------------------------------- */
+    /* -- Adresses d'utilisateur ------------------------------------------------------------------------------------ */
     $stmtAdressHasUsers = $pdo->prepare(
         'INSERT INTO Adresses_has_Users (Adresses_id_adress, Users_id_user)
                 VALUES (:Adresses_id_adress, :Users_id_user)'
@@ -85,7 +95,7 @@ if (isset($_POST['submit'])) {
 
 
 <!-- Formulaire ------------------------------------------------------------------------------------------------------->
-<h1>Données personnelles</h1>
+<h1 class="title">Données personnelles</h1>
 <form action="index.php" method="POST">
     <div class="grid-container">
 
@@ -126,3 +136,5 @@ if (isset($_POST['submit'])) {
 
     <p><a href="events.php">Go to events >></a></p>
 </div>
+</body>
+</html>
