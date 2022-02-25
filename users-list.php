@@ -1,4 +1,11 @@
-
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="is-half, initial-scale=1">
+    <title>Utilisateurs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
 
 <?php
 require_once 'DB_connection.php';?>
@@ -19,14 +26,7 @@ require_once 'DB_connection.php';?>
         ?>
 
 
-<!DOCTYPE html>
-<html lang="EN">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="is-half, initial-scale=1">
-    <title>Utilisateurs</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-</head>
+
 <!-- Card utilisateur ------------------------------------------------------------------------------------------------->
 <body>
 
@@ -39,9 +39,9 @@ require_once 'DB_connection.php';?>
                     <div class="media-content">
 
                         <p class="title is-4">Prénom et Nom</p>
-                        <p><?php echo"{$row['first_name']} {$row['Last_name']}"?></p>
+                        <p class="subtitle"><?php echo"{$row['first_name']} {$row['Last_name']}"?></p>
                         <p class="title is-4">Adresse</p>
-                        <p><?php echo "{$row['street']}"?> <?php echo"{$row['postal_code']} {$row['city']}"?> </p>
+                        <p class="subtitle"><?php echo "{$row['street']}"?>, <?php echo"{$row['postal_code']} {$row['city']}"?> </p>
 
                     </div>
                 </div>
@@ -62,11 +62,11 @@ require_once 'DB_connection.php';?>
 
 
 <!-- Boutons ---------------------------------------------------------------------------------------------------------->
-<div id="goto">
-    <p><a href="index.php"><< Go back to Sign In</a></p>
+    <div id="goto">
+        <p><a href="index.php"><< Go back to Sign In</a></p>
 
-    <p><a href="events.php">Go to events >></a></p>
-</div>
+        <p><a href="events.php">Go to events >></a></p>
+    </div>
 
 </body>
 </html>

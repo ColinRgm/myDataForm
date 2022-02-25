@@ -43,7 +43,9 @@ $idUser = $_GET['id_user'];
 </form>
 
 <div id="goto">
-    <p><a href="index.php"><< Go back to Sign In</a></p>
+    <p><a href="index.php"><< Go to Sign In</a></p>
+
+    <p><a href="users-list.php"><< Go back to User List</a></p>
 
     <p><a href="events.php">Go to events >></a></p>
 </div>

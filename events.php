@@ -22,23 +22,23 @@ if (isset($_POST['submit'])){
 
 
 <!-- Formulaire 2 ----------------------------------------------------------------------------------------------------->
-        <h1>Evénements</h1>
-        <form action="events.php" method="POST">
-            <div class="grid-container-2">
+<h1>Evénements</h1>
+<form action="events.php" method="POST">
+    <div class="grid-container-2">
 
-                <input type="text" id="name" name="name" aria-label="" placeholder="Nom de l'événement">
+        <input type="text" id="name" name="name" aria-label="" placeholder="Nom de l'événement">
 
-                <textarea style="resize: none;" id="description" name="description" placeholder="Description de l'événement" aria-label=""></textarea>
+        <textarea style="resize: none;" id="description" name="description" placeholder="Description de l'événement" aria-label=""></textarea>
 
-                <input type="datetime-local" id="start_time" name="start_time" aria-label="">
+        <input type="datetime-local" id="start_time" name="start_time" aria-label="">
 
-                <input type="datetime-local" id="end_time" name="end_time" aria-label="">
+        <input type="datetime-local" id="end_time" name="end_time" aria-label="">
 
-                <input id="submit" name="submit" type="submit" value="Envoyer"/>
-            </div>
-        </form>
-        <div id="goto">
-            <p><a href="index.php"><< Go back to Sign In</a></p>
+        <input id="submit" name="submit" type="submit" value="Envoyer"/>
+    </div>
+</form>
+<div id="goto">
+    <p><a href="index.php"><< Go back to Sign In</a></p>
 
-            <p><a href="users-list.php">Go to users >></a></p>
-        </div>
+    <p><a href="users-list.php">Go to users >></a></p>
+</div>
