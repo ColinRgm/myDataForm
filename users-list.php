@@ -24,16 +24,20 @@ require_once 'DB_connection.php';?>
         $stmtUserAndAdress -> execute();
 
         ?>
+<body>
+<div id="goto">
+    <p><a href="index.php">Create user</a></p>
 
-
+    <p><a href="events.php">Create events</a></p>
+</div>
 <p class="title">Utilisateurs</p>
 <!-- Card utilisateur ------------------------------------------------------------------------------------------------->
-<body>
+
 
 <?php while ($row = $stmtUserAndAdress->fetch()) { ?>
 
     <div class="container is-2">
-        <div class="card">
+        <div class="carduser">
             <div class="card-content">
                 <div class="media">
                     <div class="media-content">
@@ -47,8 +51,8 @@ require_once 'DB_connection.php';?>
             </div>
             <div class="card">
                 <footer class="card-footer">
-                    <a href="edit.php?id=<?php echo $row['id_user'];?>" class="card-footer-item">Edit</a>
-                    <a href="#" class="card-footer-item">Delete</a>
+                    <a href="edit.php?id=<?php echo $row['id_user'];?>" class="card-footer-item"><b>Edit</b></a>
+                    <a href="#" class="card-footer-item"><b>Delete</b></a>
                 </footer>
             </div>
         </div>
@@ -61,11 +65,7 @@ require_once 'DB_connection.php';?>
 
 
 <!-- Boutons ---------------------------------------------------------------------------------------------------------->
-    <div id="goto">
-        <p><a href="index.php"><< Go back to Sign In</a></p>
 
-        <p><a href="events.php">Go to events >></a></p>
-    </div>
 
 </body>
 </html>

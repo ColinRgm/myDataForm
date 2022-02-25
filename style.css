@@ -1,6 +1,7 @@
 body {
     text-align: center;
-    font-family: "Roboto Light", sans-serif;
+    font-family: "Roboto", sans-serif;
+    color: black;
 }
 
 .title {
@@ -139,9 +140,7 @@ body {
 }
 
 #goto {
-    font-style: normal;
     font-size: 20px;
-    text-decoration: none;
     margin: 100px 0 100px 0;
 }
 
@@ -201,20 +200,26 @@ body {
 
 /* -- Edit Users -----------------------------------------------------------------------------------------------------*/
 
-.title:first-child {
-
-}
-
-.title:last-child {
-
-}
-
 .subtitle {
     padding: 0 0 25px 0;
 }
 
 /* -- Card -----------------------------------------------------------------------------------------------------*/
 
-.card {
-    margin-bottom: 25px;
+.carduser {
+    margin: 0 200px 40px 200px;
+    padding: 0 5px 5px 5px;
+    border: gray 2px solid;
+}
+
+.card-footer-item:first-child {
+    background-color: blue;
+    color: white;
+    font-size: 17px;
+}
+
+.card-footer-item:last-child {
+    background-color: red;
+    color: black;
+    font-size: 17px;
 }

@@ -1,3 +1,17 @@
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
 <?php
     require_once 'DB_connection.php';
 
@@ -17,6 +31,11 @@
 
 <style> <?php include 'style.css';?> </style>
 
+<div id="goto">
+    <p><a href="index.php">Create user</a></p>
+
+    <p><a href="users-list.php">User list</a></p>
+</div>
 <!-- Formulaire Edit -------------------------------------------------------------------------------------------------->
 <h1 class="title">Modifier données personnelles</h1>
 <form action="edit.php" method="POST">
@@ -55,10 +74,3 @@
     </div>
 </form>
 
-<div id="goto">
-    <p><a href="index.php"><< Go to Sign In</a></p>
-
-    <p><a href="users-list.php"><< Go back to User List</a></p>
-
-    <p><a href="events.php">Go to events >></a></p>
-</div>

@@ -7,6 +7,7 @@ require_once 'DB_connection.php'; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>MyData_Form</title>
 </head>
 <body>
@@ -93,7 +94,11 @@ if (isset($_POST['submit'])) {
 ?>
 
 
+<div id="goto">
+    <p><a href="users-list.php">User list</a></p>
 
+    <p><a href="events.php">Create events</a></p>
+</div>
 <!-- Formulaire ------------------------------------------------------------------------------------------------------->
 <h1 class="title">Données personnelles</h1>
 <form action="index.php" method="POST">
@@ -131,10 +136,6 @@ if (isset($_POST['submit'])) {
         <input id="button" name="submit" type="submit" value="Envoyer"/>
     </div>
 </form>
-<div id="goto">
-    <p><a href="users-list.php">Go to users >></a></p>
 
-    <p><a href="events.php">Go to events >></a></p>
-</div>
 </body>
 </html>

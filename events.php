@@ -6,6 +6,7 @@ require_once 'DB_connection.php'; ?>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -32,7 +33,11 @@ if (isset($_POST['submit'])){
 ?>
 
 
+<div id="goto">
+    <p><a href="index.php">Create user</a></p>
 
+    <p><a href="users-list.php">User list</a></p>
+</div>
 <!-- Formulaire 2 ----------------------------------------------------------------------------------------------------->
     <h1 class="title">Evénements</h1>
     <form action="events.php" method="POST">
@@ -49,10 +54,6 @@ if (isset($_POST['submit'])){
             <input id="submit" name="submit" type="submit" value="Envoyer"/>
         </div>
     </form>
-    <div id="goto">
-        <p><a href="index.php"><< Go back to Sign In</a></p>
 
-        <p><a href="users-list.php">Go to users >></a></p>
-    </div>
 </body>
 </html>
