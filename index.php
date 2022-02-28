@@ -30,10 +30,10 @@ if (isset($_POST['submit'])) {
         'countryName' => $country
     ]);
 
-    $existantCountry = $stmt_countryIfExistOrNot->fetchAll();
+    $existantCountry = $stmt_countryIfExistOrNot->fetch();
 
     if ($existantCountry) {
-        $id_country = $existantCountry[0]['id_country'];
+        $id_country = $existantCountry['id_country'];
     } else {
         $stmt_country = $pdo->prepare(
             'INSERT INTO Countries (country_name)

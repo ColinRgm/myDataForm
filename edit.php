@@ -56,20 +56,49 @@ if (isset($_POST['update'])) {
 
 
 
+/* -- Country --------------------------------------------------------------------------------------------------- */
+    $country = $_POST['country'];
+
+    $stmt_countryIfExistOrNot = $pdo->prepare(
+        'SELECT * FROM Countries WHERE country_name = :countryName'
+    );
+
+    $stmt_countryIfExistOrNot->execute([
+        'countryName' => $country
+    ]);
+
+    $existantCountry = $stmt_countryIfExistOrNot->fetch();
+
+    if ($existantCountry) {
+        $id_country = $existantCountry['id_country'];
+    } else {
+        $stmt_country = $pdo->prepare(
+            'INSERT INTO Countries (country_name)
+                        VALUE(:country_name)');
+        $stmt_country->execute([
+            'country_name' => $country
+        ]);
+        $id_country = $pdo->lastInsertId();
+    }
+
+
 /* -- Adresses ------------------------------------------------------------------------------------------------------ */
     $stmtUpdateAdress = $pdo->prepare(
-        'UPDATE Adresses SET street=:street, postal_code=:postal_code, city=:city WHERE id_adress=:id_adress'
+        'UPDATE Adresses SET street=:street, postal_code=:postal_code, city=:city, Countries_id_country=:Countries_id_country WHERE id_adress=:id_adress'
     );
 
     $stmtUpdateAdress->execute([
             'street' => $_POST['street'],
             'postal_code' => $_POST['postal_code'],
             'city' => $_POST['city'],
-            'id_adress' => $stmtData['id_adress']
+            'id_adress' => $stmtData['id_adress'],
+            'Countries_id_country' => $id_country
         ]
     );
 
     $stmtTryAdress = $stmtUpdateAdress->fetch();
+
+
 
 
 

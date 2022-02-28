@@ -24,6 +24,8 @@ require_once 'DB_connection.php';?>
         $stmtUserAndAdress -> execute();
 
         ?>
+
+<!-- Boutons ---------------------------------------------------------------------------------------------------------->
 <body>
 <div id="goto">
     <p><a href="index.php">Create user</a></p>
@@ -52,7 +54,7 @@ require_once 'DB_connection.php';?>
             <div class="card">
                 <footer class="card-footer">
                     <a href="edit.php?id=<?php echo $row['id_user'];?>" class="card-footer-item"><b>Edit</b></a>
-                    <a href="#" class="card-footer-item"><b>Delete</b></a>
+                    <a href="delete.php?id=<?php echo $row['id_user'];?>" class="card-footer-item"><b>Delete</b></a>
                 </footer>
             </div>
         </div>
@@ -64,7 +66,7 @@ require_once 'DB_connection.php';?>
 
 
 
-<!-- Boutons ---------------------------------------------------------------------------------------------------------->
+
 
 
 </body>
