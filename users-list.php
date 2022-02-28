@@ -16,10 +16,10 @@ require_once 'DB_connection.php';?>
 
 /* -- Afficher les infos des utilisateurs --------------------------------------------------------------------------- */
         $stmtUserAndAdress = $pdo->prepare(
-                'SELECT * FROM Adresses_has_Users
-                    JOIN Adresses A on A.id_adress = Adresses_has_Users.Adresses_id_adress
-                    JOIN Countries C on C.id_country = A.Countries_id_country
-                    JOIN Users U on Adresses_has_Users.Users_id_user = U.id_user'
+                'SELECT * FROM Users
+                       INNER JOIN Adresses_has_Users AhU on Users.id_user = AhU.Users_id_user
+                       INNER JOIN Adresses A on AhU.Adresses_id_adress = A.id_adress
+                       INNER JOIN Countries C on A.Countries_id_country = C.id_country'
                 );
         $stmtUserAndAdress -> execute();
 

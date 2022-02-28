@@ -35,7 +35,7 @@ if (isset($_POST['update'])) {
 
 
 
-    /* -- Users ----------------------------------------------------------------------------------------------------------*/
+/* -- Users ----------------------------------------------------------------------------------------------------------*/
     $stmtUpdateUsers = $pdo->prepare(
         'UPDATE Users SET first_name=:first_name, Last_name=:Last_name, birthdate=:birthdate, email=:email, phone=:phone, civility=:civility, sex=:sex WHERE id_user=:id_user'
     );
@@ -56,7 +56,7 @@ if (isset($_POST['update'])) {
 
 
 
-    /* -- Adresses ------------------------------------------------------------------------------------------------------ */
+/* -- Adresses ------------------------------------------------------------------------------------------------------ */
     $stmtUpdateAdress = $pdo->prepare(
         'UPDATE Adresses SET street=:street, postal_code=:postal_code, city=:city WHERE id_adress=:id_adress'
     );
@@ -65,7 +65,7 @@ if (isset($_POST['update'])) {
             'street' => $_POST['street'],
             'postal_code' => $_POST['postal_code'],
             'city' => $_POST['city'],
-            'id_adress' => $_GET['id']
+            'id_adress' => $stmtData['id_adress']
         ]
     );
 
@@ -131,7 +131,7 @@ if (isset($_POST['update'])) {
 
             <input type="text" id="street" name="street" placeholder="Rue et N°" aria-label="" value="<?= $stmtData ['street']?>">
 
-            <input type="text" id="postal_code" name="postal_code" placeholder="Code postal" aria-label="" maxlength="5" value="<?= $stmtData ['postal_code']?>">
+            <input type="text" id="postal_code" name="postal_code" placeholder="Code postal" aria-label="" value="<?= $stmtData ['postal_code']?>">
 
             <input type="text" id="city" name="city" placeholder="Ville" aria-label="" value="<?= $stmtData ['city']?>">
 

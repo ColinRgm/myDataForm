@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
                 VALUES (:street, :postal_code, :city, :Countries_id_country)');
     $stmt_adress->execute([
         'street' => $_POST['street'],
-        'postal_code' => $_POST['npa'],
+        'postal_code' => $_POST['postal_code'],
         'city' => $_POST['city'],
         'Countries_id_country' => $id_country,
     ]);
