@@ -144,7 +144,7 @@ if (isset($_POST['update'])) {
 
             <select name="civility" id="civility" aria-label="">
                 <option value="0" <?= ($stmtData ['civility'] == "0") ? "selected" : "" ?>>Célibataire</option>
-                <option value="1" <?= ($stmtData ['civility'] == "1") ? "selected" : ""?>>Marié(e)</option>
+                <option value="1" <?= ($stmtData ['civility'] == "1") ? "selected" : "" ?>>Marié(e)</option>
                 <option value="2" <?= ($stmtData ['civility'] == "2") ? "selected" : "" ?>>Divorcé</option>
             </select>
 

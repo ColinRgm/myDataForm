@@ -15,33 +15,31 @@
 
 /* -- Delete Adresses has users --------------------------------------------------------------------------------------*/
 
-    $stmtDelete = $pdo->prepare(
+    $stmtDeleteAdressAndUsers = $pdo->prepare(
         'DELETE FROM Adresses_has_Users
             WHERE Users_id_user = :Users_id_user'
     );
 
-    $stmtDelete->execute(['Users_id_user' => $_GET['id']]);
+    $stmtDeleteAdressAndUsers->execute(['Users_id_user' => $_GET['id']]);
 
 /* -- Delete Users ---------------------------------------------------------------------------------------------------*/
 
-    $stmtDelete = $pdo->prepare(
+    $stmtDeleteUsers = $pdo->prepare(
         'DELETE FROM Users
             WHERE id_user = :id_user'
     );
 
-    $stmtDelete->execute(['id_user' => $_GET['id']]);
+    $stmtDeleteUsers->execute(['id_user' => $_GET['id']]);
 
 /* -- Delete Adresses ------------------------------------------------------------------------------------------------*/
 
-    $stmtDelete = $pdo->prepare(
+    $stmtDeleteAdress = $pdo->prepare(
         'DELETE FROM Adresses
             WHERE id_adress = :id_adress'
     );
 
-    $stmtDelete->execute(['id_adress' => $_POST['id_adress']]);
+    $stmtDeleteAdress->execute(['id_adress' => $stmtDelete['id_adress']]);
 
 /* -- Retour à la liste ----------------------------------------------------------------------------------------------*/
 
     header('location: users-list.php');
-
-    var_dump($stmtDelete);
