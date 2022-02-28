@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
         'INSERT INTO Adresses (street, postal_code, city, Countries_id_country)
                 VALUES (:street, :postal_code, :city, :Countries_id_country)');
     $stmt_adress->execute([
-        'street' => $_POST['adress'],
+        'street' => $_POST['street'],
         'postal_code' => $_POST['npa'],
         'city' => $_POST['city'],
         'Countries_id_country' => $id_country,
@@ -125,9 +125,9 @@ if (isset($_POST['submit'])) {
 
         <input type="tel" id="phone" name="phone" aria-label="" placeholder="N° tél">
 
-        <input type="text" id="adress" name="adress" placeholder="Rue et N°" aria-label="">
+        <input type="text" id="street" name="street" placeholder="Rue et N°" aria-label="">
 
-        <input type="text" id="npa" name="npa" placeholder="Code postal" aria-label="">
+        <input type="text" id="postal_code" name="postal_code" placeholder="Code postal" aria-label="">
 
         <input type="text" id="city" name="city" placeholder="Ville" aria-label="">
 

@@ -85,7 +85,7 @@ body {
     font-size: 17px;
 }
 
-#adress {
+#street {
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -94,16 +94,8 @@ body {
     font-size: 17px;
 }
 
-#num {
-    width: 100%;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    font-size: 17px;
-}
 
-#npa {
+#postal_code {
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
